@@ -1,13 +1,13 @@
 import React from 'react'
-import { CardContainer, Card, ImageContainer, CardImage, ContentContainer, CardCategory, CardTitle, CardDescription, ProductPriceContainer, RealPrice, FakePrice, ProductBtnContainer, CardButton, CartIcon } from "./productCard.styled";
+import { CardContainer, Card, ImageContainer, ContentContainer, CardCategory, CardTitle, CardDescription, ProductPriceContainer, RealPrice, FakePrice, CardButton} from "./productCard.styled";
+import iconCart from '../../assets/icon-cart.svg';
+
 
 function ProductCard() {
     return (
         <CardContainer>
             <Card>
-                <ImageContainer>
-                    <CardImage />
-                </ImageContainer>
+                <ImageContainer />
 
                 <ContentContainer>
                     <CardCategory>
@@ -27,11 +27,9 @@ function ProductCard() {
                         <FakePrice>$169.99</FakePrice>
                     </ProductPriceContainer>
 
-                    <ProductBtnContainer>
-                        <CardButton>
-                            <CartIcon /> Add to Cart
-                        </CardButton>
-                    </ProductBtnContainer>
+                    <CardButton>
+                        <span><img src={iconCart}></img></span>Add to Cart
+                    </CardButton>
 
                 </ContentContainer>
             </Card>
